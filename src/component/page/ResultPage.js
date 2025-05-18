@@ -5,6 +5,7 @@ import Image from "next/image";
 import result1 from "@/../public/3.result/result-1.png";
 import result2 from "@/../public/3.result/result-2.png";
 import result3 from "@/../public/3.result/result-3.png";
+import circle1Img from "@/../public/0.start/blur-circle-1.png";
 
 export default function ResultPage() {
 
@@ -23,7 +24,7 @@ export default function ResultPage() {
   return (
     <>
       <MobileFrame>
-        <div>
+        <div className="flex flex-col items-center">
           {
           psyState.score < 5 && <Image src={result1} alt="result1"></Image>
           }
@@ -37,11 +38,18 @@ export default function ResultPage() {
           }
 
 
+          <div className="text-[#B65A0F] text-[16px] font-normal mt-[24px] mb-[50px]">
+            長按或截圖可保存結果
+          </div>
+
+
           <div 
-            className={`bg-[#89BCFF] w-full rounded-full text-white py-[16px] text-sm flex justify-center 
-              items-center font-medium shadow-[0px_4px_0px_1px_#1098EC] cursor-pointer hover:translate-y-[2px] transition`}
+            className={`bg-[#B65A0F] w-[138px] rounded-full text-white py-[16px] text-[18px] flex justify-center 
+              items-center font-semibold shadow-[0px_4px_0px_1px_#8D4509] cursor-pointer hover:translate-y-[2px] transition relative z-10`}
             onClick ={playAgain}
           >再玩一次</div>
+
+          <Image className="absolute bottom-0 translate-y-1/2 pointer-events-none z-0"src={circle1Img} alt='circle1'></Image>
         </div>
         
       </MobileFrame>
