@@ -24,7 +24,7 @@ export default function StartPage({nextStep}) {
             現在，就來看看你是什麼等級的失控可頌吧。
           </div>
           <Image onClick={nextStep} className="w-[160px]" src={startBtn} alt='startBtn'></Image>
-          <Image className="absolute bottom-0 translate-y-1/2"src={circle1Img} alt='circle1'></Image>
+          <Image className="absolute bottom-0 translate-y-1/2 pointer-events-none"src={circle1Img} alt='circle1'></Image>
         </div>
 
       </MobileFrame>

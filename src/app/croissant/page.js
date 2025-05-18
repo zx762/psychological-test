@@ -54,8 +54,8 @@ export default function Croissant() {
    <div className="w-screen h-screen bg-gray-100 flex items-center justify-center">
       { psyState.state == 0 && <StartPage nextStep={nextStep}/>}
       { psyState.state == 1 && <QuestionPagetPage nextStep={nextStep} questionIndex={psyState.questionState}/>}
-      { psyState.state == 2 && <DisplayResultPagePage/>}
-      { psyState.state == 3 && <ResultPagePage/>}
+      { psyState.state == 2 && <DisplayResultPagePage nextStep={nextStep}/>}
+      { psyState.state == 3 && <ResultPagePage />}
 
       {/* <div onClick={prevStep}>上一步</div> */}
       {/* <div onClick={nextStep}>下一步</div> */}
