@@ -59,8 +59,8 @@ export default function QuestionPage({questionIndex, nextStep}) {
           {/* <Image className="absolute top-0 -translate-y-1/2"src={circle2Img} alt='circle2'></Image>
           <Image src={q1Up} className="w-[88px] mb-[35px]" alt='q1Up'></Image> */}
 
-          <Image className="absolute top-0 -translate-y-1/2" src={circleImages[questionIndex]} alt='circle'></Image>
-          <Image src={upImages[questionIndex]} className="w-[88px] mb-[35px]" alt='up'></Image>
+          <Image className="absolute top-0 -translate-y-1/2 scale-150 z-0" src={circleImages[questionIndex]} alt='circle'></Image>
+          <Image src={upImages[questionIndex]} className="w-[88px] mb-[35px] relative z-10" alt='up'></Image>
 
 
           <div className={`${getMainColor("text")} border-2 ${getMainColor("border")} rounded-full w-[48px] h-[48px]
@@ -118,9 +118,9 @@ export default function QuestionPage({questionIndex, nextStep}) {
             })
 
           }
-          <Image src={bottomImages[questionIndex]} className="w-[88px] mt-[40px]" alt='bottom'></Image>
+          <Image src={bottomImages[questionIndex]} className="w-[88px] mt-[40px] relative z-10" alt='bottom'></Image>
 
-          <Image className="absolute bottom-0 translate-y-1/2"src={circleImages[questionIndex]} alt='circle'></Image>
+          <Image className="absolute bottom-0 translate-y-1/2 scale-150 z-0 pointer-events-none"src={circleImages[questionIndex]} alt='circle'></Image>
         </div>
 
 
@@ -130,4 +130,3 @@ export default function QuestionPage({questionIndex, nextStep}) {
 
   );
 }
-

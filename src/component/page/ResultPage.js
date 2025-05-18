@@ -24,7 +24,7 @@ export default function ResultPage() {
   return (
     <>
       <MobileFrame>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center h-screen overflow-hidden">
           {
           psyState.score < 5 && <Image src={result1} alt="result1"></Image>
           }
@@ -49,7 +49,7 @@ export default function ResultPage() {
             onClick ={playAgain}
           >再玩一次</div>
 
-          <Image className="absolute bottom-0 translate-y-1/2 pointer-events-none z-0"src={circle1Img} alt='circle1'></Image>
+          <Image className="absolute bottom-0 translate-y-1/2 scale-150 pointer-events-none z-0"src={circle1Img} alt='circle1'></Image>
         </div>
         
       </MobileFrame>

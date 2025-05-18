@@ -9,8 +9,8 @@ export default function DisplayResultPage({nextStep}) {
   return (
     <>
       <MobileFrame>
-        <div className="flex flex-col items-center ">
-          <Image className="absolute top-0 -translate-y-1/2"src={circle1Img} alt='circle1'></Image>
+        <div className="flex flex-col items-center justify-center h-screen overflow-hidden">
+          <Image className="absolute top-0 -translate-y-1/2 scale-150"src={circle1Img} alt='circle1'></Image>
 
           <Image className="w-[72px] h-[42px]" src={croissantImg} alt='croissant'></Image>
 
@@ -23,7 +23,7 @@ export default function DisplayResultPage({nextStep}) {
               items-center font-semibold shadow-[0px_4px_0px_1px_#8D4509] cursor-pointer hover:translate-y-[2px] transition`}
             onClick ={nextStep}
           >查看結果</div>
-          <Image className="absolute bottom-0 translate-y-1/2 pointer-events-none"src={circle1Img} alt='circle1'></Image>
+          <Image className="absolute bottom-0 translate-y-1/2 pointer-events-none scale-150"src={circle1Img} alt='circle1'></Image>
         </div>
 
       </MobileFrame>
